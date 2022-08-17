@@ -20,29 +20,12 @@ body {
           align-items: center;
   height: 100vh;
   font-family: "Kumbh Sans", sans-serif;
-  background-color: hsl(185deg, 75%, 39%);
   color: hsl(227deg, 10%, 46%);
   text-align: center;
-}
-body .background {
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-body .background img:nth-child(1) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform: translate(-750px, -600px);
-          transform: translate(-750px, -600px);
-}
-body .background img:nth-child(2) {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  -webkit-transform: translate(750px, 600px);
-          transform: translate(750px, 600px);
+  background-color: hsl(185deg, 75%, 39%);
+  background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top -600px left -750px, bottom -600px right -750px;
 }
 
 main {
@@ -138,22 +121,12 @@ main section .stats-container .stats p:nth-child(2) {
 }
 
 @media (min-width: 768px) {
-  body .background img:nth-child(1) {
-    -webkit-transform: translate(-450px, -600px);
-            transform: translate(-450px, -600px);
-  }
-  body .background img:nth-child(2) {
-    -webkit-transform: translate(450px, 600px);
-            transform: translate(450px, 600px);
+  body {
+    background-position: top -600px left -450px, bottom -600px right -450px;
   }
 }
 @media (min-width: 1024px) {
-  body .background img:nth-child(1) {
-    -webkit-transform: translate(-250px, -600px);
-            transform: translate(-250px, -600px);
-  }
-  body .background img:nth-child(2) {
-    -webkit-transform: translate(300px, 600px);
-            transform: translate(300px, 600px);
+  body {
+    background-position: top -600px left -250px, bottom -600px right -300px;
   }
 }/*# sourceMappingURL=styles.css.map */
